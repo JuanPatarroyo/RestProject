@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.service;
+package co.com.ws;
 
 import co.com.model.Car;
+import co.com.service.EntityService;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -18,16 +19,14 @@ import javax.ws.rs.core.Response.Status;
  * @author jpatarroyo
  */
 @Path("/car")
-@Stateless
 public class CarServiceRS {
-
-    @Inject
-    private CarService service;
+    
+    private EntityService<Car> service;
 
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Car> cars() {
-        return service.getCars();
+        return service.selectAll();
     }
 
     @GET
