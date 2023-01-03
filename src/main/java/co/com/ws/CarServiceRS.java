@@ -26,14 +26,14 @@ public class CarServiceRS {
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Car> cars() {
-        return service.selectAll();
+        return service.selectAll("Car");
     }
 
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Path("{id}") // /car/{id}
     public Car findById(@PathParam("id") int id) {
-        return service.findById(new Car(id));
+        return service.selectById(new Car(id));
     }
 
     @POST

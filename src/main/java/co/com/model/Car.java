@@ -30,6 +30,10 @@ public class Car implements Serializable {
     public Car() {
     }
 
+    public Car(int id) {
+        this.id = id;
+    }
+
     public Car(int id, String brand, String model) {
         this.id = id;
         this.brand = brand;

@@ -6,6 +6,7 @@
 package co.com.service;
 
 import co.com.util.RespuestaObject;
+import java.util.List;
 
 /**
  *
@@ -13,9 +14,9 @@ import co.com.util.RespuestaObject;
  */
 public interface EntityService <T> {
     
-    RespuestaObject<T> insert(T object);
-    RespuestaObject<T> update(T object);
-    RespuestaObject<T> delete (int id);
-    RespuestaObject<T> selectAll();
-    RespuestaObject<T> selectById(int id);
+    RespuestaObject insert(T object);
+    RespuestaObject update(T object);
+    RespuestaObject delete (T object, int id);
+    List<T> selectAll(String table);
+    T selectById(T objectToFind, int id);
 }
