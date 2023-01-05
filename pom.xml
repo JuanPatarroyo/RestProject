@@ -5,7 +5,7 @@
     <artifactId>RestProject</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
-    <name>RestProject-1.0</name>
+    <name>RestProject</name>
     
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -31,7 +31,7 @@
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-client</artifactId>
-            <version>3.1.0</version>
+            <version>2.29</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
